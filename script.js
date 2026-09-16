@@ -133,7 +133,7 @@ function makeActionCard(action, cardIndex) {
     </div>
     <div class="clip-switcher" role="group" aria-label="${action.name} attack variants">
       ${action.clips.map((clip, index) => `
-        <button type="button" class="clip-button ${index === 0 ? "active" : ""}"
+        <button type="button" class="clip-button ${index === 0 ? "active" : ""}" aria-pressed="${index === 0}"
           data-src="${clip.src}" data-meta="${clip.meta}">
           <span>${String(index + 1).padStart(2, "0")}</span>${clip.label}
         </button>`).join("")}
@@ -147,8 +147,12 @@ function makeActionCard(action, cardIndex) {
         video.paused ? video.play().catch(() => {}) : video.pause();
         return;
       }
-      article.querySelectorAll(".clip-button").forEach((item) => item.classList.remove("active"));
+      article.querySelectorAll(".clip-button").forEach((item) => {
+        item.classList.remove("active");
+        item.setAttribute("aria-pressed", "false");
+      });
       button.classList.add("active");
+      button.setAttribute("aria-pressed", "true");
       label.classList.add("changing");
       video.pause();
       video.src = button.dataset.src;
