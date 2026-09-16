@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="DOA — a research project page for robust humanoid obstacle avoidance.">
-  <title>DOA — Humanoid Obstacle Avoidance</title>
+  <meta name="description" content="BARE is a body-aware reflexive evasion framework for humanoid robots guided by human motion priors and link-level collision risk.">
+  <title>BARE: Body-Aware Reflexive Evasion for Humanoid Robots</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -13,7 +13,7 @@
 <body>
   <div class="scroll-progress" aria-hidden="true"></div>
   <header class="site-header">
-    <a class="brand" href="#top" aria-label="DOA home"><span>DOA</span><i></i></a>
+    <a class="brand" href="#top" aria-label="BARE home"><span>BARE</span><i></i></a>
     <nav aria-label="Main navigation">
       <a href="#abstract">Abstract</a>
       <a href="#simulation">Simulation</a>
@@ -27,22 +27,18 @@
     <section class="hero section-shell">
       <div class="hero-copy reveal">
         <p class="eyebrow"><span></span> Research project · 2026</p>
-        <h1><em>DOA:</em> Your Paper Title Goes Here</h1>
-        <p class="hero-deck">A concise one-sentence description of the paper’s key idea and contribution to robust humanoid obstacle avoidance.</p>
+        <h1><em>BARE:</em> Body-Aware Reflexive Evasion for Humanoid Robots</h1>
+        <p class="hero-deck">A human-motion-guided framework for targeted, risk-conditioned evasive responses with whole-body balance and recovery.</p>
 
         <div class="authors" aria-label="Paper authors">
-          <span>First Author<sup>1*</sup></span>
-          <span>Second Author<sup>1*</sup></span>
-          <span>Third Author<sup>2</sup></span>
-          <span>Corresponding Author<sup>1†</sup></span>
+          <span>Anonymous Authors</span>
         </div>
-        <p class="affiliations"><sup>1</sup> Institution Name &nbsp;&nbsp; <sup>2</sup> Institution Name &nbsp;&nbsp; <sup>*</sup> Equal contribution</p>
 
         <div class="paper-links">
-          <span class="pill-link is-disabled" title="Add the paper URL when available">
+          <a class="pill-link" href="assets/paper/BARE.pdf" target="_blank" rel="noopener">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h7l4 4v14H7zM14 3v5h5M10 13h5M10 17h5"/></svg>
-            Paper <small>soon</small>
-          </span>
+            Paper <small>PDF</small>
+          </a>
           <span class="pill-link is-disabled" title="Add the code URL when available">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m8 9-3 3 3 3m8-6 3 3-3 3m-3-8-2 10"/></svg>
             Code <small>soon</small>
@@ -68,9 +64,8 @@
       <div class="abstract-layout">
         <h2 class="reveal">Learning to respond<br>when every moment<br><i>matters.</i></h2>
         <div class="abstract-copy reveal" data-delay="1">
-          <p class="lead">Replace this paragraph with your paper abstract. This area is designed for a compact summary of the research problem, your central insight, and the proposed approach.</p>
-          <p>Use this second paragraph to describe the evaluation setup and primary results. The layout remains readable at typical academic-project-page lengths and adapts cleanly to mobile screens.</p>
-          <div class="keyword-row"><span>Humanoid Robots</span><span>Obstacle Avoidance</span><span>Whole-body Control</span></div>
+          <p class="lead">Dynamic obstacle evasion is essential for safely deploying humanoid robots in real-world environments, where rapidly approaching objects demand immediate evasive responses. Recent advances in reflexive evasion have focused primarily on quadrupeds, which typically rely on whole-body maneuvers. Humanoids can exploit their greater articulation to evade through local body adjustments, potentially requiring less time and space. However, these motions can alter mass distribution or support conditions, making rapid local evasion while maintaining whole-body stability a key challenge. To address this challenge, we propose BARE (Body-Aware Reflexive Evasion), a humanoid reflexive evasion framework guided by human motion priors that generates targeted evasive responses based on collision risk across body regions. A risk-guided motion adapter selects references from a retargeted human motion library and adjusts their phase according to threat urgency, enabling the robot to reach evasive poses in time. Conditioned on the adapted reference and link-level collision risk, a reflexive evasion policy learns targeted local responses and whole-body stabilization through reinforcement learning. We validate BARE through simulation and real-world experiments, demonstrating its ability to coordinate targeted evasive responses with whole-body balance and recovery.</p>
+          <div class="keyword-row"><span>Humanoid Robots</span><span>Reflexive Evasion</span><span>Reinforcement Learning</span></div>
         </div>
       </div>
     </section>
@@ -172,9 +167,9 @@
 
   <footer>
     <div class="section-shell footer-inner">
-      <a class="brand footer-brand" href="#top"><span>DOA</span><i></i></a>
+      <a class="brand footer-brand" href="#top"><span>BARE</span><i></i></a>
       <p>Research Project Page · 2026</p>
-      <p>Website template for academic use.</p>
+      <p>Anonymous research project page.</p>
     </div>
   </footer>
 
