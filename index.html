@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="DOA — a research project page for robust humanoid obstacle avoidance.">
+  <title>DOA — Humanoid Obstacle Avoidance</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="simple.css">
+</head>
+<body>
+  <div class="scroll-progress" aria-hidden="true"></div>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="DOA home"><span>DOA</span><i></i></a>
+    <nav aria-label="Main navigation">
+      <a href="#abstract">Abstract</a>
+      <a href="#simulation">Simulation</a>
+      <a href="#real-robot">Real Robot</a>
+      <a href="#method">Method</a>
+    </nav>
+    <a class="header-cta" href="#real-robot">View demos <span>↘</span></a>
+  </header>
+
+  <main id="top">
+    <section class="hero section-shell">
+      <div class="hero-copy reveal">
+        <p class="eyebrow"><span></span> Research project · 2026</p>
+        <h1><em>DOA:</em> Your Paper Title Goes Here</h1>
+        <p class="hero-deck">A concise one-sentence description of the paper’s key idea and contribution to robust humanoid obstacle avoidance.</p>
+
+        <div class="authors" aria-label="Paper authors">
+          <span>First Author<sup>1*</sup></span>
+          <span>Second Author<sup>1*</sup></span>
+          <span>Third Author<sup>2</sup></span>
+          <span>Corresponding Author<sup>1†</sup></span>
+        </div>
+        <p class="affiliations"><sup>1</sup> Institution Name &nbsp;&nbsp; <sup>2</sup> Institution Name &nbsp;&nbsp; <sup>*</sup> Equal contribution</p>
+
+        <div class="paper-links">
+          <span class="pill-link is-disabled" title="Add the paper URL when available">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h7l4 4v14H7zM14 3v5h5M10 13h5M10 17h5"/></svg>
+            Paper <small>soon</small>
+          </span>
+          <span class="pill-link is-disabled" title="Add the code URL when available">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m8 9-3 3 3 3m8-6 3 3-3 3m-3-8-2 10"/></svg>
+            Code <small>soon</small>
+          </span>
+        </div>
+      </div>
+
+      <div class="hero-media reveal" data-delay="1">
+        <div class="hero-video-shell">
+          <video autoplay muted loop playsinline preload="metadata" poster="assets/posters/hero.jpg">
+            <source src="assets/videos/combined-sequence-a.mp4" type="video/mp4">
+          </video>
+          <div class="video-hud top"><span class="live-dot"></span> Real-time response</div>
+          <div class="video-hud bottom"><span>01</span><p>Adaptive whole-body avoidance under sequential attacks</p></div>
+        </div>
+        <p class="media-caption"><span>Overview</span> Robust responses across attack heights, directions, and objects.</p>
+      </div>
+      <div class="hero-index" aria-hidden="true">PROJECT<br>PAGE / 26</div>
+    </section>
+
+    <section id="abstract" class="abstract-section section-shell ruled-section">
+      <div class="section-kicker reveal"><span>01</span><p>Abstract</p></div>
+      <div class="abstract-layout">
+        <h2 class="reveal">Learning to respond<br>when every moment<br><i>matters.</i></h2>
+        <div class="abstract-copy reveal" data-delay="1">
+          <p class="lead">Replace this paragraph with your paper abstract. This area is designed for a compact summary of the research problem, your central insight, and the proposed approach.</p>
+          <p>Use this second paragraph to describe the evaluation setup and primary results. The layout remains readable at typical academic-project-page lengths and adapts cleanly to mobile screens.</p>
+          <div class="keyword-row"><span>Humanoid Robots</span><span>Obstacle Avoidance</span><span>Whole-body Control</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="simulation" class="demo-section section-shell ruled-section">
+      <div class="section-heading reveal">
+        <div class="section-kicker"><span>02</span><p>Simulation demos</p></div>
+        <h2>From training to<br><i>transfer.</i></h2>
+        <p>The same avoidance motion evaluated with obstacles moving at three different speeds.</p>
+      </div>
+      <div class="simulation-grid">
+        <article class="simulation-card reveal">
+          <video muted loop playsinline controls preload="metadata" poster="assets/posters/simulation-slow.jpg">
+            <source src="assets/videos/simulation-slow.mp4" type="video/mp4">
+          </video>
+          <div><span>Speed 01</span><strong>Slow</strong></div>
+        </article>
+        <article class="simulation-card reveal" data-delay="1">
+          <video muted loop playsinline controls preload="metadata" poster="assets/posters/simulation-medium.jpg">
+            <source src="assets/videos/simulation-medium.mp4" type="video/mp4">
+          </video>
+          <div><span>Speed 02</span><strong>Medium</strong></div>
+        </article>
+        <article class="simulation-card reveal" data-delay="1">
+          <video muted loop playsinline controls preload="metadata" poster="assets/posters/simulation-fast.jpg">
+            <source src="assets/videos/simulation-fast.mp4" type="video/mp4">
+          </video>
+          <div><span>Speed 03</span><strong>Fast</strong></div>
+        </article>
+      </div>
+    </section>
+
+    <section id="real-robot" class="robot-section ruled-section">
+      <div class="section-shell">
+        <div class="section-heading inverse reveal">
+          <div class="section-kicker"><span>03</span><p>Real-robot demos</p></div>
+          <h2>One robot.<br>Threats at <i>every level.</i></h2>
+          <p>Explore responses by attack height, then switch between attack direction and object for each motion.</p>
+        </div>
+
+        <div class="range-switcher reveal" role="tablist" aria-label="Attack height">
+          <button class="range-tab active" type="button" role="tab" aria-selected="true" data-range="high"><span>01</span> High attack <small>Head / upper body</small></button>
+          <button class="range-tab" type="button" role="tab" aria-selected="false" data-range="middle"><span>02</span> Middle attack <small>Torso</small></button>
+          <button class="range-tab" type="button" role="tab" aria-selected="false" data-range="low"><span>03</span> Low attack <small>Legs / lower body</small></button>
+        </div>
+
+        <div class="range-summary reveal" aria-live="polite">
+          <div><span class="summary-index">01</span><h3 id="range-title">High attack avoidance</h3></div>
+          <p id="range-description">Upper-body threats elicit lowering, leaning, and backward evasive motions.</p>
+        </div>
+        <div id="action-grid" class="action-grid" aria-live="polite"></div>
+
+        <div class="combined-heading reveal">
+          <div><span>03.B</span><h3>Moving responses</h3></div>
+          <p>Dynamic avoidance motions that relocate the robot's support region.</p>
+        </div>
+        <div id="moving-grid" class="action-grid moving-grid"></div>
+
+        <div class="combined-heading reveal">
+          <div><span>03.C</span><h3>Combined attacks</h3></div>
+          <p>Longer sequences combining threats at multiple heights.</p>
+        </div>
+        <div class="combined-grid">
+          <article class="combined-card reveal">
+            <video muted loop playsinline controls preload="metadata" poster="assets/posters/combined-a.jpg">
+              <source src="assets/videos/combined-sequence-a.mp4" type="video/mp4">
+            </video>
+            <div><span>Sequence A</span><strong>Squat · Sidestep · Crossover</strong></div>
+          </article>
+          <article class="combined-card reveal" data-delay="1">
+            <video muted loop playsinline controls preload="metadata" poster="assets/posters/combined-b.jpg">
+              <source src="assets/videos/combined-sequence-b.mp4" type="video/mp4">
+            </video>
+            <div><span>Sequence B</span><strong>Lean · Raise · Lift</strong></div>
+          </article>
+          <article class="combined-card reveal" data-delay="1">
+            <video muted loop playsinline controls preload="metadata" poster="assets/posters/combined-c.jpg">
+              <source src="assets/videos/combined-sequence-c.mp4" type="video/mp4">
+            </video>
+            <div><span>Sequence C</span><strong>Continuous Combined Attacks</strong></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="method" class="method-section section-shell ruled-section">
+      <div class="section-heading reveal">
+        <div class="section-kicker"><span>04</span><p>Method</p></div>
+        <h2>A compact pipeline<br>for <i>fast reactions.</i></h2>
+        <p>Replace the labels and description below with the final method terminology, or swap the full diagram for your framework figure.</p>
+      </div>
+
+      <div class="method-diagram reveal" role="img" aria-label="Placeholder method pipeline from observations to robot action">
+        <div class="method-inputs">
+          <div><span>01</span><strong>Proprioception</strong><small>Robot state</small></div>
+          <div><span>02</span><strong>Threat Encoding</strong><small>Height · direction</small></div>
+        </div>
+        <div class="method-arrow"><i></i><span>State</span></div>
+        <div class="method-core"><span>DOA</span><strong>Response Policy</strong><small>Latent action representation</small><div class="core-orbit"></div></div>
+        <div class="method-arrow"><i></i><span>Action</span></div>
+        <div class="method-output"><span>03</span><strong>Whole-body Control</strong><small>Agile humanoid response</small><div class="stick-robot" aria-hidden="true"><i></i><b></b><em></em></div></div>
+      </div>
+      <div class="method-notes">
+        <p><span>01</span> Describe the observation space and how attack cues are represented.</p>
+        <p><span>02</span> Summarize the training objective, policy architecture, and reward design.</p>
+        <p><span>03</span> Explain the deployment interface and real-time control frequency.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="section-shell footer-inner">
+      <a class="brand footer-brand" href="#top"><span>DOA</span><i></i></a>
+      <p>Research Project Page · 2026</p>
+      <p>Website template for academic use.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
