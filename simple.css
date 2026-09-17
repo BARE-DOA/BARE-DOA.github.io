@@ -51,7 +51,7 @@ sup { color:inherit; font-size:.7em; }
 .abstract-layout { display:block; margin-top:24px; }
 .abstract-layout h2 { display:none; }
 .abstract-copy { max-width:920px; margin-inline:auto; text-align:center; }
-.abstract-copy p,.abstract-copy .lead { margin:0 0 14px; color:#3f4144; font-size:13px; line-height:1.75; }
+.abstract-copy p,.abstract-copy .lead { margin:0 0 14px; color:#3f4144; font-size:13px; line-height:1.75; text-align:justify; text-justify:inter-word; hyphens:auto; }
 .keyword-row { display:flex; flex-wrap:wrap; justify-content:center; gap:7px; margin-top:24px; }
 .keyword-row span { padding:6px 9px; border:1px solid #bbb; border-radius:3px; font-size:9px; text-transform:uppercase; }
 .section-heading { display:block; margin-bottom:26px; text-align:center; }
