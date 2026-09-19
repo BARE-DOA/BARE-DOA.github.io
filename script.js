@@ -14,7 +14,7 @@ const demoData = {
         ]
       },
       {
-        name: "Squat",
+        name: "Crouch",
         note: "A rapid height reduction creates clearance above the head and torso.",
         poster: "assets/posters/high-squat.jpg",
         clips: [
@@ -50,8 +50,8 @@ const demoData = {
         ]
       },
       {
-        name: "Side bend",
-        note: "A coordinated lateral bend removes the torso from the incoming trajectory.",
+        name: "Rotate torso",
+        note: "A coordinated torso rotation moves the body away from the incoming trajectory.",
         poster: "assets/posters/mid-bend.jpg",
         clips: [
           { label: "Front · Poke", meta: "Front / Poke", src: "assets/videos/mid-bend-front-poke.mp4" },
@@ -66,7 +66,7 @@ const demoData = {
     description: "Leg-level threats prompt precise foot lifting and dynamic changes to the support region.",
     actions: [
       {
-        name: "Leg lift",
+        name: "Lift leg",
         note: "The threatened leg lifts with enough clearance while the stance leg stabilizes the body.",
         poster: "assets/posters/low-lift.jpg",
         clips: [
@@ -76,11 +76,18 @@ const demoData = {
         ]
       },
       {
-        name: "Crossover step",
-        note: "A quick step reshapes the support area and moves the lower limb out of danger.",
+        name: "Sidestep",
+        note: "A quick lateral step moves the lower limb out of the incoming path.",
         poster: "assets/posters/low-step.jpg",
         clips: [
-          { label: "Front · Poke", meta: "Front / Poke", src: "assets/videos/low-step-front-poke.mp4" },
+          { label: "Front · Poke", meta: "Front / Poke", src: "assets/videos/low-step-front-poke.mp4" }
+        ]
+      },
+      {
+        name: "Jump",
+        note: "A brief jump clears the incoming disc before the robot lands and regains balance.",
+        poster: "assets/posters/low-step.jpg",
+        clips: [
           { label: "Front · Disc", meta: "Front / Disc", src: "assets/videos/low-step-front-disc.mp4" }
         ]
       }
@@ -99,12 +106,12 @@ const movementData = [
     ]
   },
   {
-    name: "Lateral step",
+    name: "Sidestep",
     note: "The robot moves laterally to clear the obstacle path while maintaining balance.",
     poster: "assets/posters/move-lateral.jpg",
     clips: [
-      { label: "Chair attack", meta: "Lateral Step / Chair", src: "assets/videos/move-lateral-chair.mp4" },
-      { label: "Leg attack", meta: "Lateral Step / Leg", src: "assets/videos/move-lateral-leg.mp4" }
+      { label: "Chair attack", meta: "Sidestep / Chair", src: "assets/videos/move-lateral-chair.mp4" },
+      { label: "Leg attack", meta: "Sidestep / Leg", src: "assets/videos/move-lateral-leg.mp4" }
     ]
   }
 ];
