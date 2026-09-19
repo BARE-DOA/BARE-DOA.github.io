@@ -116,7 +116,7 @@ sup { color:inherit; font-size:.7em; }
 .combined-heading { margin:68px 0 20px; padding-bottom:14px; display:block; border-bottom:1px solid var(--line); text-align:center; }
 .combined-heading>div { display:flex; justify-content:center; gap:12px; align-items:baseline; }
 .combined-heading p { margin:9px 0 0; color:var(--muted); font-size:10px; text-align:center; }
-.combined-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:18px; max-width:760px; margin-inline:auto; }
+.combined-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:22px 18px; }
 .combined-card { overflow:hidden; background:#fff; border:1px solid var(--line); border-radius:5px; }
 .combined-card video { aspect-ratio:16/9; object-fit:cover; background:var(--soft); }
 .combined-card>div { padding:14px 15px; display:flex; flex-direction:column; justify-content:center; align-items:center; gap:5px; text-align:center; }
