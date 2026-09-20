@@ -98,8 +98,13 @@ sup { color:inherit; font-size:.7em; }
 .action-video { position:relative; aspect-ratio:16/9; overflow:hidden; background:var(--soft); }
 .action-video video { height:100%; object-fit:cover; }
 .speed-badge { position:absolute; z-index:3; top:10px; right:10px; padding:6px 8px; color:#fff; background:rgba(0,0,0,.78); border:1px solid rgba(255,255,255,.45); border-radius:4px; font-size:9px; font-weight:700; line-height:1; letter-spacing:.02em; pointer-events:none; }
-.motion-number,.playing-label { position:absolute; z-index:2; pointer-events:none; }
-.motion-number { top:10px; left:10px; display:grid; place-items:center; width:26px; height:26px; color:#fff; background:rgba(0,0,0,.72); border-radius:50%; font-size:8px; }
+.video-fullscreen { display:none; position:absolute; z-index:4; top:10px; left:10px; width:28px; height:28px; padding:0; place-items:center; color:#fff; background:rgba(0,0,0,.72); border:1px solid rgba(255,255,255,.45); border-radius:4px; font-size:20px; line-height:1; cursor:pointer; }
+.video-fullscreen svg { width:16px; height:16px; fill:none; stroke:currentColor; stroke-width:2; stroke-linecap:round; stroke-linejoin:round; }
+.custom-video-fullscreen .video-fullscreen { display:grid; }
+.video-fullscreen:hover { background:rgba(0,0,0,.9); }
+.video-fullscreen:focus-visible { outline:2px solid #fff; outline-offset:2px; }
+.custom-video-fullscreen video::-webkit-media-controls-fullscreen-button { display:none!important; }
+.playing-label { position:absolute; z-index:2; pointer-events:none; }
 .playing-label { right:10px; bottom:10px; padding:6px 8px; color:#fff; background:rgba(0,0,0,.72); font-size:8px; transition:opacity .16s; }
 .playing-label.changing { opacity:0; }
 .action-copy { min-height:112px; padding:16px; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:10px; border-bottom:1px solid var(--line); text-align:center; }
@@ -118,11 +123,18 @@ sup { color:inherit; font-size:.7em; }
 .combined-heading>div { display:flex; justify-content:center; gap:12px; align-items:baseline; }
 .combined-heading p { margin:9px 0 0; color:var(--muted); font-size:10px; text-align:center; }
 .combined-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:22px 18px; }
-.combined-card { position:relative; overflow:hidden; background:#fff; border:1px solid var(--line); border-radius:5px; }
-.combined-card video { aspect-ratio:16/9; object-fit:cover; background:var(--soft); }
-.combined-card>div { padding:14px 15px; display:flex; flex-direction:column; justify-content:center; align-items:center; gap:5px; text-align:center; }
-.combined-card>div span { color:#777; font-size:8px; text-transform:uppercase; }
+.combined-card { overflow:hidden; background:#fff; border:1px solid var(--line); border-radius:5px; }
+.combined-video-shell { position:relative; aspect-ratio:16/9; overflow:hidden; background:var(--soft); }
+.combined-video-shell video { height:100%; object-fit:cover; }
+.combined-card>div:not(.combined-video-shell) { padding:14px 15px; display:flex; flex-direction:column; justify-content:center; align-items:center; gap:5px; text-align:center; }
+.combined-card>div:not(.combined-video-shell) span { color:#777; font-size:8px; text-transform:uppercase; }
 .combined-card strong { font-size:10px; font-weight:600; }
+.action-video:fullscreen,.combined-video-shell:fullscreen { width:100vw; height:100vh; aspect-ratio:auto; background:#000; }
+.action-video:fullscreen video,.combined-video-shell:fullscreen video { width:100%; height:100%; aspect-ratio:auto; object-fit:contain; }
+.action-video:fullscreen .speed-badge,.combined-video-shell:fullscreen .speed-badge { top:20px; right:20px; padding:8px 11px; font-size:14px; }
+.action-video:fullscreen .video-fullscreen,.combined-video-shell:fullscreen .video-fullscreen { top:20px; left:20px; width:36px; height:36px; font-size:26px; }
+.action-video:fullscreen .video-fullscreen svg,.combined-video-shell:fullscreen .video-fullscreen svg { width:20px; height:20px; }
+.action-video:fullscreen .playing-label { right:20px; bottom:50px; font-size:11px; }
 .method-figure { margin:0; text-align:center; }
 .method-figure img { display:block; width:100%; height:auto; background:#fff; border:1px solid var(--line); border-radius:5px; }
 .method-figure figcaption { margin-top:12px; color:var(--muted); font-size:9px; line-height:1.5; }

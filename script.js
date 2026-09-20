@@ -120,6 +120,34 @@ const actionGrid = document.querySelector("#action-grid");
 const rangeTitle = document.querySelector("#range-title");
 const rangeDescription = document.querySelector("#range-description");
 const summaryIndex = document.querySelector(".summary-index");
+const supportsCustomFullscreen = Boolean(document.fullscreenEnabled && Element.prototype.requestFullscreen);
+
+if (supportsCustomFullscreen) {
+  document.documentElement.classList.add("custom-video-fullscreen");
+  document.querySelectorAll(".combined-video-shell video").forEach((video) => {
+    video.setAttribute("controlslist", "nofullscreen");
+  });
+}
+
+document.addEventListener("click", (event) => {
+  const button = event.target.closest(".video-fullscreen");
+  if (!button) return;
+  const shell = button.closest(".action-video, .combined-video-shell");
+  if (document.fullscreenElement === shell) {
+    document.exitFullscreen().catch(() => {});
+  } else {
+    shell.requestFullscreen().catch(() => {});
+  }
+});
+
+document.addEventListener("fullscreenchange", () => {
+  document.querySelectorAll(".video-fullscreen").forEach((button) => {
+    const isFullscreen = button.closest(".action-video, .combined-video-shell") === document.fullscreenElement;
+    const label = isFullscreen ? "Exit fullscreen" : "Enter fullscreen";
+    button.setAttribute("aria-label", label);
+    button.title = label;
+  });
+});
 
 function makeActionCard(action, cardIndex) {
   const firstClip = action.clips[0];
@@ -132,7 +160,7 @@ function makeActionCard(action, cardIndex) {
         <source src="${firstClip.src}" type="video/mp4">
       </video>
       <span class="speed-badge">Speed: 1x</span>
-      <span class="motion-number">${String(cardIndex + 1).padStart(2, "0")}</span>
+      <button class="video-fullscreen" type="button" aria-label="Enter fullscreen" title="Enter fullscreen"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 9V3h6 M15 3h6v6 M3 15v6h6 M21 15v6h-6"/></svg></button>
       <span class="playing-label">${firstClip.meta}</span>
     </div>
     <div class="action-copy">
@@ -148,6 +176,7 @@ function makeActionCard(action, cardIndex) {
     </div>`;
 
   const video = article.querySelector("video");
+  if (supportsCustomFullscreen) video.setAttribute("controlslist", "nofullscreen");
   const label = article.querySelector(".playing-label");
   article.querySelectorAll(".clip-button").forEach((button) => {
     button.addEventListener("click", () => {
