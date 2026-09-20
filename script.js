@@ -131,6 +131,7 @@ function makeActionCard(action, cardIndex) {
       <video muted loop playsinline controls preload="metadata" poster="${action.poster}">
         <source src="${firstClip.src}" type="video/mp4">
       </video>
+      <span class="speed-badge">Speed: 1x</span>
       <span class="motion-number">${String(cardIndex + 1).padStart(2, "0")}</span>
       <span class="playing-label">${firstClip.meta}</span>
     </div>

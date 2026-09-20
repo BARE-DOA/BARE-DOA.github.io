@@ -97,6 +97,7 @@ sup { color:inherit; font-size:.7em; }
 @keyframes card-in { from { opacity:0; transform:translateY(8px); } }
 .action-video { position:relative; aspect-ratio:16/9; overflow:hidden; background:var(--soft); }
 .action-video video { height:100%; object-fit:cover; }
+.speed-badge { position:absolute; z-index:3; top:10px; right:10px; padding:6px 8px; color:#fff; background:rgba(0,0,0,.78); border:1px solid rgba(255,255,255,.45); border-radius:4px; font-size:9px; font-weight:700; line-height:1; letter-spacing:.02em; pointer-events:none; }
 .motion-number,.playing-label { position:absolute; z-index:2; pointer-events:none; }
 .motion-number { top:10px; left:10px; display:grid; place-items:center; width:26px; height:26px; color:#fff; background:rgba(0,0,0,.72); border-radius:50%; font-size:8px; }
 .playing-label { right:10px; bottom:10px; padding:6px 8px; color:#fff; background:rgba(0,0,0,.72); font-size:8px; transition:opacity .16s; }
@@ -117,10 +118,10 @@ sup { color:inherit; font-size:.7em; }
 .combined-heading>div { display:flex; justify-content:center; gap:12px; align-items:baseline; }
 .combined-heading p { margin:9px 0 0; color:var(--muted); font-size:10px; text-align:center; }
 .combined-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:22px 18px; }
-.combined-card { overflow:hidden; background:#fff; border:1px solid var(--line); border-radius:5px; }
+.combined-card { position:relative; overflow:hidden; background:#fff; border:1px solid var(--line); border-radius:5px; }
 .combined-card video { aspect-ratio:16/9; object-fit:cover; background:var(--soft); }
 .combined-card>div { padding:14px 15px; display:flex; flex-direction:column; justify-content:center; align-items:center; gap:5px; text-align:center; }
-.combined-card span { color:#777; font-size:8px; text-transform:uppercase; }
+.combined-card>div span { color:#777; font-size:8px; text-transform:uppercase; }
 .combined-card strong { font-size:10px; font-weight:600; }
 .method-figure { margin:0; text-align:center; }
 .method-figure img { display:block; width:100%; height:auto; background:#fff; border:1px solid var(--line); border-radius:5px; }
