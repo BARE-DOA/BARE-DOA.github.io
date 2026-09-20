@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="simple.css?v=20260920-2">
+  <link rel="stylesheet" href="simple.css?v=20260920-3">
 </head>
 <body>
   <div class="scroll-progress" aria-hidden="true"></div>
@@ -77,27 +77,53 @@
       <div class="section-heading reveal">
         <div class="section-kicker"><span>02</span><p>Simulation demos</p></div>
         <h2>From training to<br><i>transfer.</i></h2>
-        <p>The same avoidance motion evaluated with obstacles moving at three different speeds.</p>
+        <p>Two evasive motions, each evaluated against obstacles moving at three different speeds.</p>
       </div>
-      <div class="simulation-grid">
-        <article class="simulation-card reveal">
-          <video muted loop playsinline controls preload="metadata" poster="assets/posters/simulation-slow.jpg">
-            <source src="assets/videos/simulation-slow.mp4" type="video/mp4">
-          </video>
-          <div><span>Speed 01</span><strong>Slow</strong></div>
-        </article>
-        <article class="simulation-card reveal" data-delay="1">
-          <video muted loop playsinline controls preload="metadata" poster="assets/posters/simulation-medium.jpg">
-            <source src="assets/videos/simulation-medium.mp4" type="video/mp4">
-          </video>
-          <div><span>Speed 02</span><strong>Medium</strong></div>
-        </article>
-        <article class="simulation-card reveal" data-delay="1">
-          <video muted loop playsinline controls preload="metadata" poster="assets/posters/simulation-fast.jpg">
-            <source src="assets/videos/simulation-fast.mp4" type="video/mp4">
-          </video>
-          <div><span>Speed 03</span><strong>Fast</strong></div>
-        </article>
+      <div class="simulation-group">
+        <h3 class="simulation-motion reveal">Crouch</h3>
+        <div class="simulation-grid">
+          <article class="simulation-card reveal">
+            <video muted loop playsinline controls preload="metadata" poster="assets/posters/simulation-slow.jpg">
+              <source src="assets/videos/simulation-slow.mp4" type="video/mp4">
+            </video>
+            <div><span>Obstacle speed</span><strong>Slow</strong></div>
+          </article>
+          <article class="simulation-card reveal" data-delay="1">
+            <video muted loop playsinline controls preload="metadata" poster="assets/posters/simulation-medium.jpg">
+              <source src="assets/videos/simulation-medium.mp4" type="video/mp4">
+            </video>
+            <div><span>Obstacle speed</span><strong>Medium</strong></div>
+          </article>
+          <article class="simulation-card reveal" data-delay="1">
+            <video muted loop playsinline controls preload="metadata" poster="assets/posters/simulation-fast.jpg">
+              <source src="assets/videos/simulation-fast.mp4" type="video/mp4">
+            </video>
+            <div><span>Obstacle speed</span><strong>Fast</strong></div>
+          </article>
+        </div>
+      </div>
+      <div class="simulation-group">
+        <h3 class="simulation-motion reveal">Duck</h3>
+        <div class="simulation-grid">
+          <article class="simulation-card reveal">
+            <video muted loop playsinline controls preload="metadata" poster="assets/posters/simulation-duck-slow.jpg">
+              <source src="assets/videos/simulation-duck-slow.mp4" type="video/mp4">
+            </video>
+            <div><span>Obstacle speed</span><strong>Slow</strong></div>
+          </article>
+          <article class="simulation-card reveal" data-delay="1">
+            <video muted loop playsinline controls preload="metadata" poster="assets/posters/simulation-duck-medium.jpg">
+              <source src="assets/videos/simulation-duck-medium.mp4" type="video/mp4">
+            </video>
+            <div><span>Obstacle speed</span><strong>Medium</strong></div>
+          </article>
+          <article class="simulation-card reveal" data-delay="1">
+            <video muted loop playsinline controls preload="metadata" poster="assets/posters/simulation-duck-fast.jpg">
+              <source src="assets/videos/simulation-duck-fast.mp4" type="video/mp4">
+            </video>
+            <div><span>Obstacle speed</span><strong>Fast</strong></div>
+          </article>
+        </div>
       </div>
     </section>
 

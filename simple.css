@@ -57,6 +57,8 @@ sup { color:inherit; font-size:.7em; }
 .section-heading { display:block; margin-bottom:26px; text-align:center; }
 .section-heading h2 { display:none; }
 .section-heading>p { max-width:720px; margin:10px auto 0; color:var(--muted); font-size:12px; line-height:1.6; }
+.simulation-group + .simulation-group { margin-top:42px; }
+.simulation-motion { margin:0 0 18px; padding-bottom:12px; border-bottom:1px solid var(--line); font-size:20px; font-weight:600; text-align:center; }
 .simulation-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:18px; }
 .simulation-card { overflow:hidden; border:1px solid var(--line); border-radius:5px; background:#fff; text-align:center; }
 .simulation-card video { aspect-ratio:16/9; object-fit:cover; background:var(--soft); }
